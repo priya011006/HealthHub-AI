@@ -65,7 +65,7 @@ You MUST return a JSON object with EXACTLY the following structure (do not inclu
 `;
 
   try {
-    const model = client.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const model = client.getGenerativeModel({ model: "gemini-2.5-flash" });
     const result = await model.generateContent(prompt);
     const response = await result.response;
     const responseText = response.text();
@@ -105,7 +105,7 @@ You MUST return a JSON object with EXACTLY the following structure (do not inclu
 `;
 
   try {
-    const model = client.getGenerativeModel({ model: 'gemini-1.5-flash' });
+    const model = client.getGenerativeModel({ model: "gemini-2.5-flash" });
     const result = await model.generateContent(prompt);
     const response = await result.response;
     const responseText = response.text();
