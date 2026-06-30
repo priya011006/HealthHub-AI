@@ -3,6 +3,19 @@
 HealthHub AI is a modern SaaS platform designed to optimize doctor-patient scheduling, pre-visit symptom evaluation, and post-visit recovery. By combining Google Gemini AI diagnostic guidance with automatic Google Calendar scheduling and Node-Cron medication alerts, the platform delivers a premium, production-ready solution for digital clinics.
 
 ---
+![Vercel](https://img.shields.io/badge/Frontend-Vercel-black?logo=vercel)
+![Render](https://img.shields.io/badge/Backend-Render-46E3B7?logo=render)
+![MongoDB](https://img.shields.io/badge/Database-MongoDB-47A248?logo=mongodb)
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js&logoColor=white)
+![React](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=black)
+
+## 🚀 Live Demo
+
+Frontend:
+https://health-hub-ai-gamma.vercel.app
+
+Backend API:
+https://healthhub-ai-backend.onrender.com/health
 
 ## Folder Structure
 
