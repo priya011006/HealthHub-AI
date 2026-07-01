@@ -198,23 +198,29 @@ To enable calendar syncing:
 
 ---
 
+
+Or an even cleaner version:
+
+```md
 ## 🏗 System Architecture
 
+```text
 Patient
-        │
-        ▼
+   │
+   ▼
 React Frontend (Vercel)
-        │
- REST API
-        │
-        ▼
-Node.js + Express Backend (Render)
-        │
- ├── MongoDB Atlas
- ├── Google Gemini API
- ├── Google Calendar API
- ├── Nodemailer SMTP
- └── Node-Cron Scheduler
+   │
+   ▼
+REST API
+   │
+   ▼
+Express.js Backend (Render)
+   │
+   ├── MongoDB Atlas
+   ├── Google Gemini API
+   ├── Google Calendar API
+   ├── Nodemailer SMTP
+   └── Node-Cron Scheduler
 
 ## API Documentation
 

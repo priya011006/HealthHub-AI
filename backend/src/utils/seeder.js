@@ -18,7 +18,7 @@ const seedDatabase = async () => {
         experience: 12,
         workingDays: [1, 2, 3, 4, 5],
         workingHours: { start: '09:00', end: '17:00' },
-        profilePhoto: 'https://randomuser.me/api/portraits/women/32.jpg',
+        profilePhoto: '/doctors/sarah.png'
       },
       {
         email: 'james.brown@healthhub.com',
@@ -29,7 +29,7 @@ const seedDatabase = async () => {
         experience: 8,
         workingDays: [1, 2, 3, 4],
         workingHours: { start: '10:00', end: '16:00' },
-        profilePhoto: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=300',
+        profilePhoto: '/doctors/james.png'
       },
       {
         email: 'emily.davis@healthhub.com',
@@ -40,7 +40,7 @@ const seedDatabase = async () => {
         experience: 10,
         workingDays: [2, 3, 4, 5],
         workingHours: { start: '09:00', end: '15:30' },
-        profilePhoto: 'https://randomuser.me/api/portraits/women/79.jpg',
+        profilePhoto: '/doctors/emily.png'
       },
       {
         email: 'michael.johnson@healthhub.com',
@@ -51,7 +51,7 @@ const seedDatabase = async () => {
         experience: 15,
         workingDays: [1, 2, 3, 4, 5],
         workingHours: { start: '08:30', end: '17:30' },
-        profilePhoto: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=300',
+        profilePhoto: '/doctors/michael.png'
       },
       {
         email: 'sophia.lee@healthhub.com',
@@ -62,7 +62,7 @@ const seedDatabase = async () => {
         experience: 7,
         workingDays: [1, 2, 3, 5],
         workingHours: { start: '09:00', end: '16:30' },
-        profilePhoto: 'https://randomuser.me/api/portraits/women/52.jpg',
+        profilePhoto: '/doctors/sophia.png'
       },
       {
         email: 'david.miller@healthhub.com',
@@ -73,7 +73,7 @@ const seedDatabase = async () => {
         experience: 11,
         workingDays: [1, 3, 5],
         workingHours: { start: '09:00', end: '15:00' },
-        profilePhoto: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=300',
+        profilePhoto: '/doctors/david.png'
       },
       {
         email: 'olivia.taylor@healthhub.com',
@@ -84,7 +84,7 @@ const seedDatabase = async () => {
         experience: 9,
         workingDays: [1, 2, 4, 5],
         workingHours: { start: '09:30', end: '17:00' },
-        profilePhoto: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=300',
+        profilePhoto: '/doctors/olivia.png'
       },
       {
         email: 'daniel.harris@healthhub.com',
@@ -95,7 +95,7 @@ const seedDatabase = async () => {
         experience: 14,
         workingDays: [1, 2, 3, 4],
         workingHours: { start: '08:00', end: '16:00' },
-        profilePhoto: 'https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&q=80&w=300',
+        profilePhoto: '/doctors/daniel.png'
       },
       {
         email: 'matthew.clark@healthhub.com',
@@ -106,7 +106,7 @@ const seedDatabase = async () => {
         experience: 6,
         workingDays: [1, 2, 4, 5],
         workingHours: { start: '09:00', end: '17:00' },
-        profilePhoto: 'https://randomuser.me/api/portraits/women/68.jpg',
+        profilePhoto: '/doctors/matthew.png'
       },
       {
         email: 'elizabeth.lewis@healthhub.com',
@@ -117,7 +117,7 @@ const seedDatabase = async () => {
         experience: 13,
         workingDays: [2, 3, 5],
         workingHours: { start: '09:00', end: '17:00' },
-        profilePhoto: 'https://randomuser.me/api/portraits/women/90.jpg',
+        profilePhoto: '/doctors/elizabeth.png'
       },
       {
         email: 'christopher.robinson@healthhub.com',
@@ -128,7 +128,7 @@ const seedDatabase = async () => {
         experience: 16,
         workingDays: [1, 2, 3, 5],
         workingHours: { start: '09:00', end: '16:00' },
-        profilePhoto: 'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&q=80&w=300',
+        profilePhoto: '/doctors/christopher.png'
       },
       {
         email: 'isabella.walker@healthhub.com',
@@ -139,7 +139,7 @@ const seedDatabase = async () => {
         experience: 5,
         workingDays: [1, 2, 3, 4, 5],
         workingHours: { start: '09:00', end: '17:00' },
-        profilePhoto: 'https://randomuser.me/api/portraits/women/65.jpg',
+        profilePhoto: '/doctors/isabella.png'
       }
     ];
 
