@@ -187,16 +187,27 @@ const bookAppointment = async (req, res) => {
     const patientEmail = patient.userId.email;
     const doctorEmail = doctor.userId.email;
 
-    // Async tasks: Google Calendar & Nodemailer
-    // These run in the background (failures are logged and added to SyncQueue)
-    await calendarService.createCalendarEvent(populatedAppointment, patientEmail, doctorEmail);
-    await emailService.sendBookingConfirmation(populatedAppointment, patientEmail, doctorEmail);
+    // Return success immediately
+res.status(201).json({
+  success: true,
+  message: 'Appointment scheduled successfully!',
+  appointment: populatedAppointment
+});
 
-    return res.status(201).json({
-      success: true,
-      message: 'Appointment scheduled successfully!',
-      appointment: populatedAppointment
-    });
+// Run background tasks without blocking the user
+calendarService
+  .createCalendarEvent(populatedAppointment, patientEmail, doctorEmail)
+  .catch((err) =>
+    console.error('[Background Calendar Error]:', err.message)
+  );
+
+emailService
+  .sendBookingConfirmation(populatedAppointment, patientEmail, doctorEmail)
+  .catch((err) =>
+    console.error('[Background Email Error]:', err.message)
+  );
+
+return;
   } catch (error) {
     console.error('[Book Appointment Error]:', error.message);
     return res.status(500).json({ success: false, message: 'Server error scheduling appointment.' });

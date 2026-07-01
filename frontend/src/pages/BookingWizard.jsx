@@ -632,7 +632,7 @@ const BookingWizard = () => {
               disabled={saving}
               className="btn-primary w-full mt-4 cursor-pointer"
             >
-              {saving ? 'Creating Calendar Sync...' : 'Complete Booking'}
+              {saving ? 'Finalizing Appointment...' : 'Complete Booking'}
             </button>
           </motion.div>
         )}
