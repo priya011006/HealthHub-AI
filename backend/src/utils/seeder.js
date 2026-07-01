@@ -213,21 +213,36 @@ const seedDatabase = async () => {
         console.log(`[Seeder] Seeded Doctor: ${doc.email}`);
       }
       console.log('[Seeder] All demo doctors successfully seeded.');
-    } else {
-      // Ensure all existing demo doctors have password HealthHub123!
-      for (const doc of doctorsList) {
-        const doctorUser = await User.findOne({ email: doc.email });
-        if (doctorUser) {
-          doctorUser.password = 'HealthHub123';
-          await doctorUser.save();
-          console.log(`[Seeder] Doctor ${doc.email} password reset to HealthHub123`);
+    } eelse {
+  // Update existing demo doctors and reset passwords
+  for (const doc of doctorsList) {
+    const doctorUser = await User.findOne({ email: doc.email });
+
+    if (doctorUser) {
+      // Reset password
+      doctorUser.password = 'HealthHub123';
+      await doctorUser.save();
+
+      // Update doctor profile
+      await Doctor.findOneAndUpdate(
+        { userId: doctorUser._id },
+        {
+          phone: doc.phone,
+          specialization: doc.specialization,
+          qualification: doc.qualification,
+          experience: doc.experience,
+          workingDays: doc.workingDays,
+          workingHours: doc.workingHours,
+          profilePhoto: doc.profilePhoto,
         }
-      }
-      console.log('[Seeder] Doctor records already present. Updated passwords to HealthHub123');
+      );
+
+      console.log(`[Seeder] Updated ${doc.name}`);
     }
-  } catch (error) {
-    console.error('[Seeder Error] Failed database seeding:', error.message);
   }
+
+  console.log('[Seeder] Existing doctor profiles updated.');
+}
 };
 
 module.exports = {
