@@ -199,9 +199,6 @@ To enable calendar syncing:
 ---
 
 
-Or an even cleaner version:
-
-```md
 ## 🏗 System Architecture
 
 ```text
@@ -221,58 +218,63 @@ Express.js Backend (Render)
    ├── Google Calendar API
    ├── Nodemailer SMTP
    └── Node-Cron Scheduler
-
-## API Documentation
-
-### Auth Module (`/api/auth`)
-* `POST /register`: Registers a patient profile.
-* `POST /login`: Log in (supports role selection).
-* `GET /me`: Verifies user session.
-
-### Appointments Module (`/api/appointments`)
-* `GET /slots`: Lists available slots categorized by time of day (Morning/Afternoon/Evening).
-* `POST /book`: Books a slot, triggers Gemini pre-visit screening, and syncs to Google Calendar.
-* `POST /reschedule/:id`: Reschedules an appointment.
-* `POST /cancel/:id`: Cancels an appointment.
-
-### Patients Module (`/api/patients`)
-* `GET /dashboard`: Fetches closest upcoming appointment and active reminders.
-* `GET /doctors`: Searches and filters active doctors.
-* `GET /reminders`: Lists patient medication schedules.
-* `PATCH /reminders/:id/toggle`: Toggles active state of a reminder.
-* `PUT /profile`: Updates patient profile.
-
-### Doctors Module (`/api/doctors`)
-* `GET /dashboard`: Fetches consult queue, pending notes, and patient statistics.
-* `PUT /appointments/:id/consultation`: Saves diagnosis, prescription, clinical notes, and triggers post-visit summaries.
-* `PUT /profile`: Updates doctor's availability days/hours.
-
-### Admin Module (`/api/admin`)
-* `GET /stats`: Fetches system totals, recent logs, and chart metrics.
-* `POST /doctors`: Creates a new physician login and profile.
-* `PUT /doctors/:id`: Updates physician details (including leaves).
-* `PATCH /doctors/:id/toggle`: Toggles doctor's active status.
-* `DELETE /doctors/:id`: Deletes doctor profile and cancels their appointments.
-* `GET /appointments`: Central calendar list of all bookings.
+```
 
 ---
 
-## Deployment Guide
+## 📚 API Documentation
+
+### Auth Module (`/api/auth`)
+* `POST /register` – Registers a patient profile.
+* `POST /login` – Log in (supports role selection).
+* `GET /me` – Verifies user session.
+
+### Appointments Module (`/api/appointments`)
+* `GET /slots` – Lists available slots categorized by time of day.
+* `POST /book` – Books a slot, triggers Gemini pre-visit screening, and syncs to Google Calendar.
+* `POST /reschedule/:id` – Reschedules an appointment.
+* `POST /cancel/:id` – Cancels an appointment.
+
+### Patients Module (`/api/patients`)
+* `GET /dashboard` – Fetches upcoming appointments and reminders.
+* `GET /doctors` – Searches and filters doctors.
+* `GET /reminders` – Lists medication reminders.
+* `PATCH /reminders/:id/toggle` – Toggles reminder status.
+* `PUT /profile` – Updates patient profile.
+
+### Doctors Module (`/api/doctors`)
+* `GET /dashboard` – Fetches consultation queue and statistics.
+* `PUT /appointments/:id/consultation` – Saves diagnosis, prescription, and consultation notes.
+* `PUT /profile` – Updates doctor availability.
+
+### Admin Module (`/api/admin`)
+* `GET /stats` – Retrieves dashboard statistics.
+* `POST /doctors` – Creates a doctor account.
+* `PUT /doctors/:id` – Updates doctor details.
+* `PATCH /doctors/:id/toggle` – Enables or disables a doctor.
+* `DELETE /doctors/:id` – Deletes a doctor profile.
+* `GET /appointments` – Lists all appointments.
+
+---
+
+## 🚀 Deployment Guide
 
 ### Database (MongoDB Atlas)
-1. Set up a free-tier cluster in MongoDB Atlas.
-2. In network access, allow IP connections from anywhere (`0.0.0.0/0`) for hosting providers.
-3. Save the connection string in the backend environment variables.
+1. Set up a free-tier MongoDB Atlas cluster.
+2. Allow `0.0.0.0/0` under Network Access.
+3. Add the connection string to your backend environment variables.
 
 ### Backend (Render)
-1. Connect your repository to [Render](https://render.com/).
-2. Select **Web Service** and choose the `Node` runtime.
-3. Set the build command to `npm install` and start command to `npm start`.
-4. In Advanced Settings, add the environment variables from your `.env` file.
+1. Connect the repository.
+2. Create a **Node Web Service**.
+3. Build Command: `npm install`
+4. Start Command: `npm start`
+5. Add all environment variables.
 
 ### Frontend (Vercel)
-1. Import your project into [Vercel](https://vercel.com/).
-2. Set the framework preset to **Vite**.
-3. Set the root directory of the deployment to `frontend/`.
-4. Set the build command to `npm run build` and output directory to `dist`.
-5. Set `VITE_API_URL` to point to your backend Render URL.
+1. Import the repository.
+2. Framework: **Vite**
+3. Root Directory: `frontend`
+4. Build Command: `npm run build`
+5. Output Directory: `dist`
+6. Set `VITE_API_URL` to your Render backend URL.
