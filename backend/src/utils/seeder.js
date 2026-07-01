@@ -213,7 +213,7 @@ const seedDatabase = async () => {
         console.log(`[Seeder] Seeded Doctor: ${doc.email}`);
       }
       console.log('[Seeder] All demo doctors successfully seeded.');
-    } eelse {
+    } else {
   // Update existing demo doctors and reset passwords
   for (const doc of doctorsList) {
     const doctorUser = await User.findOne({ email: doc.email });
@@ -243,6 +243,9 @@ const seedDatabase = async () => {
 
   console.log('[Seeder] Existing doctor profiles updated.');
 }
+  } catch (error) {
+    console.error('[Seeder Error] Failed database seeding:', error.message);
+  }
 };
 
 module.exports = {
