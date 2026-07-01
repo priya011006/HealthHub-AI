@@ -18,7 +18,7 @@ const seedDatabase = async () => {
         experience: 12,
         workingDays: [1, 2, 3, 4, 5],
         workingHours: { start: '09:00', end: '17:00' },
-        profilePhoto: 'https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&q=80&w=300',
+        profilePhoto: 'https://randomuser.me/api/portraits/women/32.jpg',
       },
       {
         email: 'james.brown@healthhub.com',
@@ -40,7 +40,7 @@ const seedDatabase = async () => {
         experience: 10,
         workingDays: [2, 3, 4, 5],
         workingHours: { start: '09:00', end: '15:30' },
-        profilePhoto: 'https://images.unsplash.com/photo-1594824813573-246434de83fb?auto=format&fit=crop&q=80&w=300',
+        profilePhoto: 'https://randomuser.me/api/portraits/women/79.jpg',
       },
       {
         email: 'michael.johnson@healthhub.com',
@@ -62,7 +62,7 @@ const seedDatabase = async () => {
         experience: 7,
         workingDays: [1, 2, 3, 5],
         workingHours: { start: '09:00', end: '16:30' },
-        profilePhoto: 'https://images.unsplash.com/photo-1594824813573-246434de83fb?auto=format&fit=crop&q=80&w=300',
+        profilePhoto: 'https://randomuser.me/api/portraits/women/52.jpg',
       },
       {
         email: 'david.miller@healthhub.com',
@@ -106,7 +106,7 @@ const seedDatabase = async () => {
         experience: 6,
         workingDays: [1, 2, 4, 5],
         workingHours: { start: '09:00', end: '17:00' },
-        profilePhoto: 'https://images.unsplash.com/photo-1537368910025-700350fe46c7?auto=format&fit=crop&q=80&w=300',
+        profilePhoto: 'https://randomuser.me/api/portraits/women/68.jpg',
       },
       {
         email: 'elizabeth.lewis@healthhub.com',
@@ -117,7 +117,7 @@ const seedDatabase = async () => {
         experience: 13,
         workingDays: [2, 3, 5],
         workingHours: { start: '09:00', end: '17:00' },
-        profilePhoto: 'https://images.unsplash.com/photo-1594824813573-246434de83fb?auto=format&fit=crop&q=80&w=300',
+        profilePhoto: 'https://randomuser.me/api/portraits/women/90.jpg',
       },
       {
         email: 'christopher.robinson@healthhub.com',
@@ -139,7 +139,7 @@ const seedDatabase = async () => {
         experience: 5,
         workingDays: [1, 2, 3, 4, 5],
         workingHours: { start: '09:00', end: '17:00' },
-        profilePhoto: 'https://images.unsplash.com/photo-1594824813573-246434de83fb?auto=format&fit=crop&q=80&w=300',
+        profilePhoto: 'https://randomuser.me/api/portraits/women/65.jpg',
       }
     ];
 

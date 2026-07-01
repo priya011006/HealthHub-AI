@@ -1,6 +1,6 @@
 # HealthHub AI - Smart Healthcare Appointment & Follow-up Platform
 
-HealthHub AI is a modern SaaS platform designed to optimize doctor-patient scheduling, pre-visit symptom evaluation, and post-visit recovery. By combining Google Gemini AI diagnostic guidance with automatic Google Calendar scheduling and Node-Cron medication alerts, the platform delivers a premium, production-ready solution for digital clinics.
+HealthHub AI is a modern SaaS platform designed to optimize doctor-patient scheduling, pre-visit symptom evaluation, and post-visit recovery. By combining Google Gemini AI assisted symptom analysis with automatic Google Calendar scheduling and Node-Cron medication alerts, the platform delivers a premium, production-ready solution for digital clinics.
 
 ---
 ![Vercel](https://img.shields.io/badge/Frontend-Vercel-black?logo=vercel)
@@ -16,6 +16,65 @@ https://health-hub-ai-gamma.vercel.app
 
 Backend API:
 https://healthhub-ai-backend.onrender.com/health
+
+## ✨ Key Features
+
+- 🤖 Google Gemini AI powered pre-visit symptom analysis
+- 📅 Automatic Google Calendar appointment synchronization
+- 📧 Email confirmations using Nodemailer SMTP
+- ⏰ Automated medication reminders with Node-Cron
+- 🔐 JWT Authentication with Role-Based Access Control (Patient, Doctor, Admin)
+- 👨‍⚕️ Doctor availability and appointment scheduling
+- 📊 Interactive dashboards for Patients, Doctors, and Administrators
+- 📈 Admin analytics with appointment and registration insights
+- ☁️ Production deployment using Vercel + Render + MongoDB Atlas
+
+
+## 📸 Application Preview
+
+### Secure Authentication
+![Login](assets/login.png)  
+JWT-based authentication with separate patient, doctor, and administrator portals for secure role-based access.
+
+### AI-Powered Appointment Booking
+![Booking](assets/booking.png)  
+Multi-step booking workflow featuring **Google Gemini** symptom analysis, urgency assessment, doctor selection, and real-time appointment scheduling.
+
+### Patient Dashboard
+![Patient Dashboard](assets/patientdashboard.png)  
+Personalized dashboard to manage appointments, notifications, medication reminders, and healthcare activities.
+
+### Doctor Directory
+![Doctors](assets/doctors.png)  
+Browse specialists using filters for specialty, experience, and availability before booking consultations.
+
+### Doctor Dashboard
+![Doctor Dashboard](assets/doctordashboard.png)  
+Doctors can manage appointments, review AI-generated patient summaries, and monitor their consultation schedule.
+
+### Medication Reminders
+![Medication Reminders](assets/medication.png)  
+Track medications with automated reminders and an organized medication management interface.
+
+### Admin Dashboard
+![Admin Dashboard](assets/admindashboard.png)  
+Comprehensive analytics dashboard displaying appointment trends, patient growth, physician distribution, and live system health including **MongoDB**, **Google Calendar Sync**, and **SMTP Email** services.
+
+---
+
+## 🛠 Tech Stack
+
+| Category | Technologies |
+|----------|--------------|
+| Frontend | React, Vite, Tailwind CSS |
+| Backend | Node.js, Express.js |
+| Database | MongoDB Atlas |
+| Authentication | JWT |
+| AI | Google Gemini API |
+| Calendar | Google Calendar API |
+| Email | Nodemailer SMTP |
+| Scheduling | Node-Cron |
+| Deployment | Vercel, Render |
 
 ## Folder Structure
 
@@ -47,6 +106,20 @@ HealthHub/
 ```
 
 ---
+
+## 🔑 Demo Credentials
+
+### Patient
+Email: patient@healthhub.com
+Password: HealthHub123
+
+### Doctor
+Email: doctor@healthhub.com
+Password: HealthHub123
+
+### Admin
+Email: admin@healthhub.com
+Password: HealthHub123
 
 ## Setup & Installations
 
@@ -103,7 +176,10 @@ EMAIL_PASS=your-gmail-app-password
 # Google Calendar API Client
 GOOGLE_CLIENT_ID=your-google-oauth-client-id.apps.googleusercontent.com
 GOOGLE_CLIENT_SECRET=your-google-oauth-client-secret
-GOOGLE_REDIRECT_URI=http://localhost:5000/api/calendar/oauth2callback
+GOOGLE_REDIRECT_URI=your-backend-url/api/calendar/oauth2callback
+
+Example (Local):http://localhost:5000/api/calendar/oauth2callback
+Example (Production):https://your-backend.onrender.com/api/calendar/oauth2callback
 ```
 
 ---
@@ -121,6 +197,24 @@ To enable calendar syncing:
 8. Log in as an Administrator and visit `/api/calendar/auth-url` to complete clinic calendar authorization.
 
 ---
+
+## 🏗 System Architecture
+
+Patient
+        │
+        ▼
+React Frontend (Vercel)
+        │
+ REST API
+        │
+        ▼
+Node.js + Express Backend (Render)
+        │
+ ├── MongoDB Atlas
+ ├── Google Gemini API
+ ├── Google Calendar API
+ ├── Nodemailer SMTP
+ └── Node-Cron Scheduler
 
 ## API Documentation
 
